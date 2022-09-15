@@ -1,0 +1,8 @@
+.draggable {
+  border: 1px solid skyblue;
+  padding: 10px 20px;
+}
+
+.dragging {
+  background-color: #f3fafd;
+}
