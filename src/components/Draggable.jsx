@@ -2,7 +2,7 @@ import React from 'react';
 import { useDrag } from 'react-dnd';
 import styles from '../styles/Draggable.module.css';
 
-function Draggable({ type, item, text }) {
+function Draggable({ type, item, text, style }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type,
     item,
@@ -14,6 +14,7 @@ function Draggable({ type, item, text }) {
   return (
     <span
       className={`${styles.draggable} ${isDragging && styles.dragging}`}
+      style={style}
       ref={drag}
     >
       {text}

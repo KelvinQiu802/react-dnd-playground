@@ -4,6 +4,7 @@ import Box from './Box';
 import Eg1 from './Eg1';
 import Eg2 from './Eg2';
 import Eg3 from './Eg3';
+import Eg4 from './Eg4';
 
 function Content() {
   return (
@@ -16,6 +17,9 @@ function Content() {
       </Box>
       <Box title='Real Drop'>
         <Eg3 />
+      </Box>
+      <Box title='Drag Around'>
+        <Eg4 />
       </Box>
     </div>
   );
