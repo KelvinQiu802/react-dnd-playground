@@ -1,0 +1,9 @@
+.droppable {
+  border: 1px solid greenyellow;
+  text-align: center;
+  padding: 20px;
+}
+
+.over {
+  background-color: #f7ffee;
+}
