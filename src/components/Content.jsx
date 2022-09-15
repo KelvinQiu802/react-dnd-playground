@@ -5,7 +5,9 @@ import Box from './Box';
 function Content() {
   return (
     <div className={styles.content}>
-      <Box />
+      <Box title='Basic Usage'>
+        <div>Something</div>
+      </Box>
     </div>
   );
 }

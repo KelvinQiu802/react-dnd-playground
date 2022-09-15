@@ -1,8 +1,13 @@
 import React from 'react';
-import styls from '../styles/Box.module.css';
+import styles from '../styles/Box.module.css';
 
-function Box() {
-  return <div className={styls.box}>Box</div>;
+function Box({ title, children }) {
+  return (
+    <div className={styles.box}>
+      <h2 className={styles.title}>{title}</h2>
+      {children}
+    </div>
+  );
 }
 
 export default Box;

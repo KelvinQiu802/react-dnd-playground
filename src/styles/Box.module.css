@@ -2,4 +2,11 @@
   width: 400px;
   height: 300px;
   border: orange dashed 1px;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 400;
 }
