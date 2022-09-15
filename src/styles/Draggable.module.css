@@ -2,8 +2,10 @@
   border: 2px solid skyblue;
   padding: 10px 20px;
   flex: 0;
+  cursor: grab;
 }
 
 .dragging {
   background-color: #f3fafd;
+  cursor: grabbing;
 }
