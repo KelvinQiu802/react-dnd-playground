@@ -3,11 +3,14 @@ import Draggable from './Draggable';
 import Droppable from './Droppable';
 
 function Eg4() {
-  const [position, setPosition] = React.useState({ top: 10, left: 10 });
+  const [position, setPosition] = React.useState({ top: 50, left: 100 });
 
   const handleDrop = (item, monitor, state) => {
     const { x, y } = monitor.getDifferenceFromInitialOffset();
-    setPosition((prev) => ({ top: state.top + y, left: state.left + x }));
+    const { top, left } = { top: state.top + y, left: state.left + x };
+    if (top > 0 && left > 0) {
+      setPosition((prev) => ({ top, left }));
+    }
   };
 
   const dragStyle = {
