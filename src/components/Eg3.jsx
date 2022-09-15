@@ -10,7 +10,7 @@ function Eg3() {
   ]);
   const [box2, setBox2] = React.useState([]);
 
-  const handleBox1 = (item, state) => {
+  const handleBox1 = (item, monitor, state) => {
     if (state.find((each) => each.text === item.text)) return;
     // remove from box2
     setBox2((prev) => {
@@ -25,7 +25,7 @@ function Eg3() {
     });
   };
 
-  const handleBox2 = (item, state) => {
+  const handleBox2 = (item, monitor, state) => {
     if (state.find((each) => each.text === item.text)) return;
     // remove from box1
     setBox1((prev) => {

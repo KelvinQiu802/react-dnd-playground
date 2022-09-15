@@ -6,7 +6,7 @@ function Droppable({ accept, handleDrop, text, children, state, big, style }) {
   const [{ isOver, canDrop }, drop] = useDrop(
     () => ({
       accept,
-      drop: (item) => handleDrop(item, state),
+      drop: (item, monitor) => handleDrop(item, monitor, state),
       collect: (monitor) => ({
         isOver: !!monitor.isOver(),
         canDrop: !!monitor.canDrop(),
