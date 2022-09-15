@@ -2,7 +2,7 @@ import React from 'react';
 import { useDrag } from 'react-dnd';
 import styles from '../styles/Draggable.module.css';
 
-function Draggable({ type, item, text, style }) {
+function Draggable({ type, item, text, style, hideWhenDrag }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type,
     item,
@@ -10,6 +10,11 @@ function Draggable({ type, item, text, style }) {
       isDragging: !!monitor.isDragging(),
     }),
   }));
+
+  console.log(hideWhenDrag);
+  if (isDragging && hideWhenDrag) {
+    return <div ref={drag}></div>;
+  }
 
   return (
     <span
