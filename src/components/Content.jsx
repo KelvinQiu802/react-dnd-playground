@@ -3,6 +3,7 @@ import styles from '../styles/Content.module.css';
 import Box from './Box';
 import Eg1 from './Eg1';
 import Eg2 from './Eg2';
+import Eg3 from './Eg3';
 
 function Content() {
   return (
@@ -12,6 +13,9 @@ function Content() {
       </Box>
       <Box title='Mutiple Target'>
         <Eg2 />
+      </Box>
+      <Box title='Real Drop'>
+        <Eg3 />
       </Box>
     </div>
   );

@@ -2,15 +2,18 @@ import React from 'react';
 import { useDrop } from 'react-dnd';
 import styles from '../styles/Droppable.module.css';
 
-function Droppable({ accept, handleDrop, text }) {
-  const [{ isOver, canDrop }, drop] = useDrop(() => ({
-    accept,
-    drop: (item) => handleDrop(item),
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-      canDrop: !!monitor.canDrop(),
+function Droppable({ accept, handleDrop, text, children, state }) {
+  const [{ isOver, canDrop }, drop] = useDrop(
+    () => ({
+      accept,
+      drop: (item) => handleDrop(item, state),
+      collect: (monitor) => ({
+        isOver: !!monitor.isOver(),
+        canDrop: !!monitor.canDrop(),
+      }),
     }),
-  }));
+    [state] // Dependency
+  );
 
   const isActive = isOver && canDrop;
 
@@ -21,7 +24,8 @@ function Droppable({ accept, handleDrop, text }) {
       } `}
       ref={drop}
     >
-      {text}
+      <div>{text}</div>
+      {children}
     </div>
   );
 }
