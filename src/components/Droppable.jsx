@@ -3,16 +3,24 @@ import { useDrop } from 'react-dnd';
 import styles from '../styles/Droppable.module.css';
 
 function Droppable({ accept, handleDrop, text }) {
-  const [{ isOver }, drop] = useDrop(() => ({
+  const [{ isOver, canDrop }, drop] = useDrop(() => ({
     accept,
     drop: (item) => handleDrop(item),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
+      canDrop: !!monitor.canDrop(),
     }),
   }));
 
+  const isActive = isOver && canDrop;
+
   return (
-    <div className={`${styles.droppable} ${isOver && styles.over}`} ref={drop}>
+    <div
+      className={`${styles.droppable} ${isActive && styles.over} ${
+        !isActive && canDrop && styles.can
+      } `}
+      ref={drop}
+    >
       {text}
     </div>
   );
