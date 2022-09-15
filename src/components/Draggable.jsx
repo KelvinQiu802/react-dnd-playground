@@ -11,7 +11,6 @@ function Draggable({ type, item, text, style, hideWhenDrag }) {
     }),
   }));
 
-  console.log(hideWhenDrag);
   if (isDragging && hideWhenDrag) {
     return <div ref={drag}></div>;
   }
