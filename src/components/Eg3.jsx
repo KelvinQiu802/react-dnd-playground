@@ -55,6 +55,7 @@ function Eg3() {
               type='drag-3'
               text={drag.text}
               item={{ text: drag.text }}
+              state={box1}
             />
           ))}
         </DragGroup>
@@ -72,6 +73,7 @@ function Eg3() {
               type='drag-3'
               text={drag.text}
               item={{ text: drag.text }}
+              state={box2}
             />
           ))}
         </DragGroup>

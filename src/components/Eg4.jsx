@@ -32,6 +32,7 @@ function Eg4() {
           style={dragStyle}
           hideWhenDrag={true}
           item={{ top: position.top, left: position.left }}
+          state={position}
         />
       </Droppable>
     </>
