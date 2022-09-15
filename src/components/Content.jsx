@@ -5,6 +5,7 @@ import Eg1 from './Eg1';
 import Eg2 from './Eg2';
 import Eg3 from './Eg3';
 import Eg4 from './Eg4';
+import Eg5 from './Eg5';
 
 function Content() {
   return (
@@ -20,6 +21,9 @@ function Content() {
       </Box>
       <Box title='Drag Around'>
         <Eg4 />
+      </Box>
+      <Box title='Nested Draggable'>
+        <Eg5 />
       </Box>
     </div>
   );
