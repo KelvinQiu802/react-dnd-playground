@@ -1,7 +1,8 @@
 .droppable {
-  border: 1px solid greenyellow;
+  border: 2px solid greenyellow;
   text-align: center;
-  padding: 20px;
+  width: 80%;
+  padding: 20px 0;
 }
 
 .over {
