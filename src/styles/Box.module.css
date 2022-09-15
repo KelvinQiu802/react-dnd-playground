@@ -1,4 +1,8 @@
 .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 50px;
   width: 400px;
   height: 300px;
   border: orange dashed 1px;
