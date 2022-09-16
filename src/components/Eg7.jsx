@@ -49,6 +49,7 @@ function Eg7() {
           index={index}
           text={item.text}
           handleDrag={handleDrag}
+          state={cards}
         />
       ))}
     </div>
