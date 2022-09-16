@@ -8,7 +8,7 @@ function Droppable({ accept, handleDrop, text, children, state, big, style }) {
       accept,
       drop: (item, monitor) => handleDrop(item, monitor, state),
       collect: (monitor) => ({
-        isOver: !!monitor.isOver(),
+        isOver: !!monitor.isOver({ shallow: true }),
         canDrop: !!monitor.canDrop(),
       }),
     }),
