@@ -6,6 +6,7 @@ import Eg2 from './Eg2';
 import Eg3 from './Eg3';
 import Eg4 from './Eg4';
 import Eg5 from './Eg5';
+import Eg6 from './Eg6';
 
 function Content() {
   return (
@@ -24,6 +25,9 @@ function Content() {
       </Box>
       <Box title='Nested Draggable'>
         <Eg5 />
+      </Box>
+      <Box title='Nested Droppable'>
+        <Eg6 />
       </Box>
     </div>
   );
