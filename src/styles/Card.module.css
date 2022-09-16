@@ -1,0 +1,12 @@
+.draggable {
+  border: 2px solid skyblue;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: grab;
+  margin: 5px;
+}
+
+.dragging {
+  background-color: #f3fafd;
+  cursor: grabbing;
+}
